@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-box">
+      <div class="input-box">
+        <div>
+          <label for="day">DAY</label>
+          <input required type="text" id="dd" name="day" placeholder="DD" />
+          <p id = "dW"></p>
+        </div>
+        <div>
+          <label for="month">MONTH</label>
+          <input required id="mm" type="text" name="month" placeholder="MM" />
+          <p id = "mW"></p>
+        </div>
+        <div>
+          <label for="year">YEAR</label>
+          <input required id="yy" type="text" name="year" placeholder="YY" />
+          <p id = "yW"></p>
+        </div>
+      </div>
+
+      <hr />
+      <div class="arrow-box" onclick="findAge()">
+        <img src="assets\icon-arrow.svg" alt="" />
+      </div>
+
+      <div class="age-box">
+        <i
+          ><h1><span id="year">--</span> years</h1></i
+        >
+        <i
+          ><h1><span id="month">--</span> months</h1></i
+        >
+        <i
+          ><h1><span id="day">--</span> days</h1></i
+        >
+      </div>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+      <script>
+        const date = new Date();
+
+        function warning(id1, id2){
+          document.getElementById(id1).innerHTML = "Must be Valid";
+          document.getElementById(id2).style.borderColor = "hsl(0, 100%, 67%)";
+
+        }
+
+        function findAge(){
+          document.getElementById("dW").innerHTML = "";
+          document.getElementById("mW").innerHTML = "";
+          document.getElementById("yW").innerHTML = "";
+          document.getElementById("dd").style.borderColor = "hsl(0, 0%, 94%)";
+          document.getElementById("mm").style.borderColor = "hsl(0, 0%, 94%)";
+          document.getElementById("yy").style.borderColor = "hsl(0, 0%, 94%)";
+          const today = new Date();
+
+          let day = document.getElementById("dd").value;
+          let month = document.getElementById("mm").value;
+          let year = document.getElementById("yy").value;
+
+          let allok = true;
+          
+          if (day.length == 0 || parseInt(day) > 31){
+              allok = false;
+              warning('dW', 'dd');
+          }
+          if (month.length == 0 || parseInt(month) > 12){
+            allok = false;
+            warning('mW', 'mm');
+          }
+          if (year.length == 0 || parseInt(year) > today.getFullYear()){
+            allok = false;
+            warning('yW','yy');
+          }
+
+          if (allok){
+            const dob = new Date(month+'/'+day+'/'+year);
+            let ageYears = today.getFullYear() - dob.getFullYear();
+            let ageMonths = today.getMonth() - dob.getMonth();
+            let ageDays = today.getDate() - dob.getDate();
+
+            if (ageMonths < 0) {
+                ageYears--;
+                ageMonths += 12;
+            }
+
+            if (ageDays < 0) {
+                ageMonths--;
+                const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);  month
+                ageDays += prevMonth.getDate();
+            }
+            if (ageMonths < 0) {
+                ageYears--;
+                ageMonths += 12;
+            }
+            document.getElementById("day").innerHTML = ageDays;
+            document.getElementById("month").innerHTML = ageMonths;
+            document.getElementById("year").innerHTML =  ageYears;
+
+          }
+
+          }
+
+
+        </script> 
+  </script>
+</html>

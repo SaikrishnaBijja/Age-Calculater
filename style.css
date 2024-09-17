@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background-color: hsl(0, 0%, 94%);
+  display: grid;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+}
+span {
+  color: hsl(259, 100%, 65%);
+}
+h1 {
+  margin-top: -30px;
+  margin-bottom: -30px;
+  font-size: 5rem;
+}
+input {
+  font-size: 32px;
+  width: 120px;
+  font-weight: 800;
+  border-radius: 4%;
+  border-style: solid;
+  border-color: hsl(0, 0%, 94%);
+}
+input[type="text"]:focus {
+  border-color: hsl(259, 100%, 65%);
+}
+label {
+  font-size: 13px;
+  font-weight: bolder;
+  color: hsl(0, 1%, 44%);
+  margin-bottom: 5px;
+}
+label {
+  display: block;
+}
+hr {
+  width: 600px;
+  border-color: hsl(0, 0%, 94%);
+  margin-right: 16%;
+}
+p {
+  font-size: small;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: hsl(0, 100%, 67%);
+}
+::placeholder {
+  color: hsl(0, 0%, 86%);
+}
+.main-box {
+  background-color: white;
+  margin-top: 5%;
+  border-radius: 3%;
+  border-bottom-right-radius: 22%;
+  width: 750px;
+  height: 500px;
+}
+.age-box {
+  font-size: 32px;
+  font-weight: 800i;
+  color: black;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.input-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 30px;
+  margin-top: 40px;
+  width: 500px;
+}
+.arrow-box {
+  width: 79px;
+  height: 79px;
+  background-color: black;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-left: 600px;
+  margin-top: -51px;
+}
+.arrow-box:hover {
+  background-color: hsl(259, 100%, 65%);
+}
+
+@media screen and (min-width: 375px) {
+  .main-box {
+    width: 360px;
+    height: 500px;
+  }
+  h1 {
+    font-size: 3.7rem;
+  }
+  hr {
+    width: 280px;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  .input-box {
+    margin-left: 30px;
+    margin-top: 40px;
+    width: 300px;
+  }
+  input {
+    width: 80px;
+  }
+  label,
+  input {
+    margin-left: 5px;
+  }
+  .arrow-box {
+    width: 60px;
+    height: 60px;
+    margin-left: 140px;
+    margin-top: -59px;
+  }
+}
