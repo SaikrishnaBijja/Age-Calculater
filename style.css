@@ -84,7 +84,7 @@ p {
   background-color: hsl(259, 100%, 65%);
 }
 
-@media screen and (min-width: 375px) {
+@media only screen and (max-width: 400px) {
   .main-box {
     margin-top: 200px;
     width: 360px;
