@@ -15,5 +15,5 @@ This is implemented as a small static web application (HTML, CSS, JavaScript).
 ## Demo / Screenshots
 
 
-Live Site: [SaikrishnaBijja](https://saikrishnabijja.github.io/Age-Calculater/)
+Live Site: [Age Calculater](https://saikrishnabijja.github.io/Age-Calculater/)
 
