@@ -13,7 +13,8 @@ This is implemented as a small static web application (HTML, CSS, JavaScript).
 ---
 
 ## Demo / Screenshots
+![Age Calculator Screenshot](assets/Screenshot 2025-10-14 100258.png)
 
 
-Live Site: [Age Calculater](https://saikrishnabijja.github.io/Age-Calculater/)
+## Live Site: [Age Calculater](https://saikrishnabijja.github.io/Age-Calculater/)
 
